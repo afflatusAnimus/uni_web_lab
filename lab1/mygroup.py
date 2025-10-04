@@ -45,12 +45,11 @@ def filter_students_by_avg(students, min_avg):
         if sum(student["marks"]) / len(student["marks"]) > min_avg
     ]
 
-if __name__ == "__main__":
-    threshold = float(input("Введите минимальный средний балл: "))
-    filtered = filter_students_by_avg(groupmates, threshold)
-    
-    if filtered:
-        print("\nСтуденты со средним баллом выше", threshold, ":")
-        print_students(filtered)
-    else:
-        print("Нет студентов со средним баллом выше", threshold)
+threshold = float(input("Введите минимальный средний балл: "))
+filtered = filter_students_by_avg(groupmates, threshold)
+
+if filtered:
+    print("\nСтуденты со средним баллом выше", threshold, ":")
+    print_students(filtered)
+else:
+    print("Нет студентов со средним баллом выше", threshold)
